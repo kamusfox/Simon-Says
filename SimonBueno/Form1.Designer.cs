@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bVerde = new System.Windows.Forms.Button();
             this.bRojo = new System.Windows.Forms.Button();
             this.bAmarillo = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             // 
             this.bVerde.BackColor = System.Drawing.Color.Silver;
             this.bVerde.Enabled = false;
-            this.bVerde.Location = new System.Drawing.Point(181, 115);
+            this.bVerde.Location = new System.Drawing.Point(328, 115);
             this.bVerde.Name = "bVerde";
             this.bVerde.Size = new System.Drawing.Size(122, 92);
             this.bVerde.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             this.bRojo.BackColor = System.Drawing.Color.Silver;
             this.bRojo.Enabled = false;
-            this.bRojo.Location = new System.Drawing.Point(320, 115);
+            this.bRojo.Location = new System.Drawing.Point(181, 226);
             this.bRojo.Name = "bRojo";
             this.bRojo.Size = new System.Drawing.Size(122, 92);
             this.bRojo.TabIndex = 1;
@@ -63,7 +64,7 @@
             // 
             this.bAmarillo.BackColor = System.Drawing.Color.Silver;
             this.bAmarillo.Enabled = false;
-            this.bAmarillo.Location = new System.Drawing.Point(181, 224);
+            this.bAmarillo.Location = new System.Drawing.Point(328, 226);
             this.bAmarillo.Name = "bAmarillo";
             this.bAmarillo.Size = new System.Drawing.Size(122, 92);
             this.bAmarillo.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             this.bAzul.BackColor = System.Drawing.Color.Silver;
             this.bAzul.Enabled = false;
-            this.bAzul.Location = new System.Drawing.Point(320, 224);
+            this.bAzul.Location = new System.Drawing.Point(181, 115);
             this.bAzul.Name = "bAzul";
             this.bAzul.Size = new System.Drawing.Size(122, 92);
             this.bAzul.TabIndex = 3;
@@ -103,6 +104,7 @@
             this.Controls.Add(this.bAmarillo);
             this.Controls.Add(this.bRojo);
             this.Controls.Add(this.bVerde);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Simon Says";
             this.ResumeLayout(false);
