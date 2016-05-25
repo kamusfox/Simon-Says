@@ -15,7 +15,9 @@ namespace SimonBueno
         public static List<int> secuencia = new List<int>();
         Random random = new Random();
         int secuenciaIndice = 0;
-        public void TurnoJuego(int numBoton ,Form formu,Button bEmpezar, Button bVerde, Button bRojo, Button bAmarillo, Button bAzul)
+        String puntos = "Puntuacion: ";
+        int puntuacion = 0;
+        public void TurnoJuego(int numBoton ,Form formu,Button bEmpezar, Button bVerde, Button bRojo, Button bAmarillo, Button bAzul,Label lblPuntos)
         {
             bEmpezar.Enabled = false;
             if (numBoton == secuencia[secuenciaIndice])
@@ -37,18 +39,18 @@ namespace SimonBueno
                 }
                 formu.Refresh();
                 Thread.Sleep(500);
-
+                
                 bRojo.BackColor = Color.Silver;
                 bVerde.BackColor = Color.Silver;
                 bAzul.BackColor = Color.Silver;
                 bAmarillo.BackColor = Color.Silver;
 
                 secuenciaIndice++;
-
+                puntuacion += 10;
                 if (secuenciaIndice == secuencia.Count)
                 {
                     Thread.Sleep(500);
-                    TurnoOrdenador(formu,bVerde, bRojo,bAmarillo,bAzul);
+                    TurnoOrdenador(formu,bVerde, bRojo,bAmarillo,bAzul,lblPuntos);
                 }
             }else{
                 bRojo.BackColor = Color.Black;
@@ -58,12 +60,14 @@ namespace SimonBueno
                 bEmpezar.Enabled = true;
                 secuenciaIndice = 0;
                 secuencia.Clear();
+                puntuacion = 0;
             }
 
         }
 
-        public void TurnoOrdenador(Form formu, Button bVerde, Button bRojo, Button bAmarillo, Button bAzul)
+        public void TurnoOrdenador(Form formu, Button bVerde, Button bRojo, Button bAmarillo, Button bAzul,Label lblPuntos)
         {
+            lblPuntos.Text = puntos + puntuacion;
             secuencia.Add(random.Next(1, 5));
             bVerde.Enabled = false;
             bRojo.Enabled = false;

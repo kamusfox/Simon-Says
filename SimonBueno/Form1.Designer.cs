@@ -34,6 +34,7 @@
             this.bAmarillo = new System.Windows.Forms.Button();
             this.bAzul = new System.Windows.Forms.Button();
             this.bEmpezar = new System.Windows.Forms.Button();
+            this.lblPuntos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bVerde
@@ -94,11 +95,22 @@
             this.bEmpezar.UseVisualStyleBackColor = true;
             this.bEmpezar.Click += new System.EventHandler(this.bEmpezar_Click);
             // 
+            // lblPuntos
+            // 
+            this.lblPuntos.AutoSize = true;
+            this.lblPuntos.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntos.Location = new System.Drawing.Point(320, 366);
+            this.lblPuntos.Name = "lblPuntos";
+            this.lblPuntos.Size = new System.Drawing.Size(316, 45);
+            this.lblPuntos.TabIndex = 5;
+            this.lblPuntos.Text = "Pulse nueva partida";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 465);
+            this.Controls.Add(this.lblPuntos);
             this.Controls.Add(this.bEmpezar);
             this.Controls.Add(this.bAzul);
             this.Controls.Add(this.bAmarillo);
@@ -108,6 +120,7 @@
             this.Name = "Form1";
             this.Text = "Simon Says";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,6 +130,7 @@
         public System.Windows.Forms.Button bAzul;
         public System.Windows.Forms.Button bVerde;
         public System.Windows.Forms.Button bEmpezar;
+        private System.Windows.Forms.Label lblPuntos;
     }
 }
 

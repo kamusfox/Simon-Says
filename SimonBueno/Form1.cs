@@ -24,26 +24,27 @@ namespace SimonBueno
 
         public void bEmpezar_Click(object sender, EventArgs e)
         {
-            clases.TurnoOrdenador(this, bVerde, bRojo, bAmarillo, bAzul);
+            clases.TurnoOrdenador(this, bVerde, bRojo, bAmarillo, bAzul,lblPuntos);
             bEmpezar.Enabled = false;
+
         }
         public void bVerde_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(1,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul);
+            clases.TurnoJuego(1,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
         }
         private void bRojo_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(2, this ,bEmpezar, bVerde, bRojo, bAmarillo, bAzul);
+            clases.TurnoJuego(2, this ,bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
         }
 
         private void bAmarillo_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(3,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul);
+            clases.TurnoJuego(3,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
         }
 
         private void bAzul_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(4,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul);
+            clases.TurnoJuego(4,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
         }
     }
 }
