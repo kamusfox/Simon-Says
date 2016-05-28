@@ -12,39 +12,40 @@ using System.Windows.Forms;
 
 namespace SimonBueno
 {
-    
+
     public partial class Form1 : Form
     {
+        ClaseSimon clases;
         public Form1()
         {
             InitializeComponent();
-
+            clases = new ClaseSimon(bEmpezar, this, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
         }
-        ClaseSimon clases = new ClaseSimon();
+
 
         public void bEmpezar_Click(object sender, EventArgs e)
         {
-            clases.TurnoOrdenador(this, bVerde, bRojo, bAmarillo, bAzul,lblPuntos);
+            clases.TurnoOrdenador();
             bEmpezar.Enabled = false;
 
         }
         public void bVerde_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(1,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
+            clases.TurnoJuego(1);
         }
         private void bRojo_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(2, this ,bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
+            clases.TurnoJuego(2);
         }
 
         private void bAmarillo_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(3,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
+            clases.TurnoJuego(3);
         }
 
         private void bAzul_Click(object sender, EventArgs e)
         {
-            clases.TurnoJuego(4,this, bEmpezar, bVerde, bRojo, bAmarillo, bAzul, lblPuntos);
+            clases.TurnoJuego(4);
         }
     }
 }
