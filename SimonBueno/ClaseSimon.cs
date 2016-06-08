@@ -123,8 +123,8 @@ namespace SimonBueno
                 formuClass.BackgroundImage = Properties.Resources.wallpaperFinal;
                 perder.Play();
                 lblPuntosClass.Text = puntosFin + puntuacion;
-                bEmpezarClass.Enabled = true;
                 MessageBox.Show(puntosFin + puntuacion);
+                bEmpezarClass.Enabled = true;
                 secuenciaIndice = 0;
                 secuencia.Clear();
                 puntuacion = 0;
